@@ -1,0 +1,93 @@
+/* controls audio */
+audio::-webkit-media-controls-play-button {
+  display: none !important;
+}
+/* audio::-webkit-media-controls-mute-button {
+  display: none !important;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  display: none !important;
+} */
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+/* .row.content {height: 550px} */
+
+/* Set gray background color and 100% height */
+/* .sidenav {
+  background-color: #f1f1f1;
+  height: 100%;
+} */
+
+/* On small screens, set height to 'auto' for the grid */
+/* @media screen and (max-width: 767px) {
+  .row.content {height: auto;}
+} */
+
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+.activeAction {
+  background-color: #337ab7;
+  color: white;
+  border-radius: 4px;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.sidenavLeft {
+  position: fixed;
+}
+
+.sidenavRight {
+  margin-left: 460px;
+}
+
+.inputMedia {
+  position: fixed;
+  background-color: #ffffff;
+  margin-top: -262px !important;
+  height: 250px;
+}
+
+.showLyricToKaraoke {
+  margin-top: 165px;
+}
+
+.repeatOff {
+  background-color: green;
+}
+
+.resetLyric {
+  color: black !important;
+}
+
+.startLyric {
+  color: blue !important;
+}
+
+.passLyric {
+  color: #8d6e63;
+}
+
+.setCorlorRed {
+  color: red;
+}
+
+.setFrontBold {
+  font-weight: bold;
+}
+
+#audioSong {
+  width: 100%;
+}
+
+.fixed-size-img {
+  width: 100%;
+}

@@ -1,0 +1,45 @@
+<!-- <link href="http://vjs.zencdn.net/5.2.1/video-js.css" rel="stylesheet"> -->
+<!-- <script src="http://vjs.zencdn.net/5.2.1/video.js"></script> -->
+
+<video-js id="myPlayerID"
+
+  data-player="default"
+  data-embed="default"
+  data-application-id
+  class="video-js"
+  controls
+  width="640"
+  height="360">
+  <source src='tai_san_tieu_san_robert_kiyosaki.mp4' type='video/mp4'>
+  <!-- <track kind="captions" src="https://solutions.brightcove.com/bcls/captions/adding_captions_to_videos_french.vtt" srclang="en" label="English"> -->
+</video-js>
+
+<script src="index.min.js"></script>
+<script type="text/javascript">
+  videojs.getPlayer('myPlayerID').ready(function() {
+    var myPlayer = this;
+    // myPlayer.on("play", function () {
+    //   //If you want to start English as the caption automatically
+    //   myPlayer.textTracks()[1].mode = "showing";
+    // });
+
+    // myPlayer.textTrackSettings.setValues({
+    //   backgroundColor: "#FF0",
+    //   color: "#00F",
+    //   fontFamily: "monospaceSansSerif",
+    //   fontPercent: 1.5,
+    //   windowColor: "#0FF",
+    //   windowOpacity: "0.5"
+    // });
+
+    myPlayer.one("loadedmetadata",function(){
+      var enTrack = myPlayer.addRemoteTextTrack({
+        manualCleanup: false,
+        kind: 'captions',
+        language: 'en',
+        label: 'English',
+        src: 'caption.vtt'
+      });
+    });
+  });
+</script>
